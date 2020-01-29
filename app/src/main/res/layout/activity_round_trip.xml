@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RoundTripActivity">
+
+    <ImageView
+        android:id="@+id/cover"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@drawable/bkg_01"
+        android:scaleType="centerCrop"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/from_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="From (Select Departure City) "
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/to_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="To (Select Arrival City)"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/from_tv"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinner_from"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:entries="@array/country_arrays"
+        android:prompt="@string/country_prompt"
+        app:layout_constraintStart_toStartOf="@+id/from_tv"
+        app:layout_constraintTop_toBottomOf="@+id/from_tv" />
+
+    <Spinner
+        android:id="@+id/spinner_to"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:entries="@array/country_arrays"
+        android:prompt="@string/country_prompt"
+        app:layout_constraintEnd_toEndOf="@id/to_tv"
+        app:layout_constraintStart_toStartOf="@+id/to_tv"
+        app:layout_constraintTop_toBottomOf="@id/to_tv" />
+
+    <Button
+        android:id="@+id/btn_proceed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16sp"
+        android:text="Proceed"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/button_shape"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

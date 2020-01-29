@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FlightDetailsActivity">
+
+    <ImageView
+        android:id="@+id/cover"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/bkg_01"
+        android:scaleType="centerCrop"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tvAdults"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16sp"
+        android:text="How many Adults: "
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cover" />
+
+    <RadioButton
+        android:id="@+id/radio1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        app:layout_constraintStart_toStartOf="@id/tvAdults"
+        app:layout_constraintTop_toBottomOf="@id/tvAdults" />
+
+    <RadioButton
+        android:id="@+id/radio2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2"
+        app:layout_constraintStart_toStartOf="@id/radio1"
+        app:layout_constraintTop_toBottomOf="@id/radio1" />
+
+    <RadioButton
+        android:id="@+id/radio3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3 Or more"
+        app:layout_constraintStart_toStartOf="@id/radio2"
+        app:layout_constraintTop_toBottomOf="@id/radio2" />
+
+    <TextView
+        android:id="@+id/tvBags"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="How Many bags:"
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toStartOf="@id/tvAdults"
+        app:layout_constraintTop_toBottomOf="@id/radio3" />
+
+    <RadioButton
+        android:id="@+id/Radiobags1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        app:layout_constraintStart_toStartOf="@+id/radio1"
+        app:layout_constraintTop_toBottomOf="@id/tvBags" />
+
+    <RadioButton
+        android:id="@+id/Radiobags2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2 Or more"
+        app:layout_constraintStart_toStartOf="@id/Radiobags1"
+        app:layout_constraintTop_toBottomOf="@id/Radiobags1" />
+
+    <TextView
+        android:id="@+id/tvDepartDate"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Date of Departure"
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toStartOf="@id/tvBags"
+        app:layout_constraintTop_toBottomOf="@id/Radiobags2" />
+
+    <EditText
+        android:id="@+id/etDateDepart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="Date of departure"
+        android:inputType="date"
+        app:layout_constraintStart_toStartOf="@id/tvDepartDate"
+        app:layout_constraintTop_toBottomOf="@id/tvDepartDate" />
+
+    <TextView
+        android:id="@+id/tvFlightTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Flight Timing"
+        android:textColor="@color/black_color"
+        app:layout_constraintStart_toStartOf="@id/tvDepartDate"
+        app:layout_constraintTop_toBottomOf="@id/etDateDepart" />
+
+    <EditText
+        android:id="@+id/etFlightTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter a time Flight"
+        android:inputType="time"
+        app:layout_constraintStart_toStartOf="@id/tvFlightTime"
+        app:layout_constraintTop_toBottomOf="@id/tvFlightTime" />
+
+    <Button
+        android:id="@+id/btnProceed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/button_shape"
+        android:text="PROCEED"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvFlightTime"
+        tools:layout_editor_absoluteX="24dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
